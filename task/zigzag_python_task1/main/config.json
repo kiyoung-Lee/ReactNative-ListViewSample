@@ -7,6 +7,7 @@
         "class": {
           "class" : "xans-element- xans-product xans-product-listmain-1 xans-product-listmain xans-product-1"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -19,6 +20,7 @@
         "class": {
           "class" : "xans-element- xans-product xans-product-listmain-2 xans-product-listmain xans-product-2"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -31,6 +33,7 @@
         "class": {
           "class" : "xans-element- xans-product xans-product-listmain-6 xans-product-listmain xans-product-6"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -43,6 +46,7 @@
         "class": {
           "class" : "xans-element- xans-product xans-product-listmain-7 xans-product-listmain xans-product-7"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -55,6 +59,7 @@
         "class": {
           "class" : "xans-element- xans-product xans-product-listmain-8 xans-product-listmain xans-product-8"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -174,30 +179,7 @@
         "class": {
           "class" : "item_list cle"
         },
-        "grid_name_key" : "grid_name",
-        "item_code_pattern" : "item_code",
-        "item_detail_url_pattern" : "item_detail_url",
-        "image_url_pattern" :"image_url",
-        "item_name_pattern": "item_name",
-        "item_price_pattern": "item_price"
-      },
-      {
-        "tag":"div",
-        "class": {
-          "class" : "item_list list3322 cle"
-        },
-        "grid_name_key" : "grid_name",
-        "item_code_pattern" : "item_code",
-        "item_detail_url_pattern" : "item_detail_url",
-        "image_url_pattern" :"image_url",
-        "item_name_pattern": "item_name",
-        "item_price_pattern": "item_price"
-      },
-      {
-        "tag":"div",
-        "class": {
-          "class" : "item_list cle"
-        },
+        "is_container" : false,
         "grid_name_key" : "grid_name",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -205,7 +187,91 @@
         "item_name_pattern": "item_name",
         "item_price_pattern": "item_price"
       }
-    ]
+    ],
+    "cell_name":{
+      "tag":"div",
+      "class":{
+        "class": "list_cell"
+      }
+    },
+    "pattern":{
+      "item_code":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "item_detail_url":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "image_url":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"img"
+        },
+        {
+          "command":"element",
+          "tag":"src"
+        }
+      ],
+      "item_name":[
+        {
+          "command":"find",
+          "tag":"ul"
+        },
+        {
+          "command":"find_class",
+          "tag":"li",
+          "class":{
+            "class" : "item_name dsc_gray"
+          }
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "item_price":[
+        {
+          "command":"find",
+          "tag":"ul"
+        },
+        {
+          "command":"find_all_class",
+          "tag":"li",
+          "class":{
+            "class" : "item_price"
+          }
+        },
+        {
+          "command":"element",
+          "tag":1
+        },
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ]
+    }
   },
   "mocobling": {
     "url": "http://www.mocobling.com/",
@@ -215,6 +281,7 @@
         "class": {
           "class" : "part2"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name_new_item",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -227,6 +294,7 @@
         "class": {
           "class" : "section sec5 aft"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name_moco_made",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -239,6 +307,7 @@
         "class": {
           "class" : "section sec7 aft"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name_best_item",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -251,6 +320,7 @@
         "class": {
           "class" : "section sec8 aft"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name_acc",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",
@@ -263,6 +333,7 @@
         "class": {
           "class" : "section sec9 aft"
         },
+        "is_container" : true,
         "grid_name_key" : "grid_name_jewelry",
         "item_code_pattern" : "item_code",
         "item_detail_url_pattern" : "item_detail_url",

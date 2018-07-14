@@ -1,35 +1,39 @@
 from main.item import item_info
 
 
-def test_test(target_mall, soup):
+def parse(target_mall, soup):
     root_tag_list = target_mall["root_tag_list"]
 
     item_info_list = list()
 
     for root_tag in root_tag_list:
-        root_tag_name = root_tag["tag"]
-        root_tag_class = root_tag["class"]
-        item_container = soup.find(root_tag_name, root_tag_class)
-
-        grid_name_key = root_tag["grid_name_key"]
-
-        grid_info = target_mall[grid_name_key]
-        grid_name = grid_info["tag"]
-        grid_class = grid_info["class"]
-
-        grid = item_container.find(grid_name, grid_class)
-
-        cell_info = target_mall["cell_name"]
-        cell_tag_name = cell_info["tag"]
-        cell_class = cell_info["class"]
-
+        is_container = root_tag["is_container"]
         item_code_pattern_key = root_tag["item_code_pattern"]
         item_detail_url_key = root_tag["item_detail_url_pattern"]
         image_url_key = root_tag["image_url_pattern"]
         item_name_key = root_tag["item_name_pattern"]
         item_price_key = root_tag["item_price_pattern"]
 
-        cell_list = grid.find_all(cell_tag_name, cell_class)
+        cell_info = target_mall["cell_name"]
+        cell_tag_name = cell_info["tag"]
+        cell_class = cell_info["class"]
+
+        if is_container:
+            root_tag_name = root_tag["tag"]
+            root_tag_class = root_tag["class"]
+            item_container = soup.find(root_tag_name, root_tag_class)
+
+            grid_name_key = root_tag["grid_name_key"]
+
+            grid_info = target_mall[grid_name_key]
+            grid_name = grid_info["tag"]
+            grid_class = grid_info["class"]
+
+            grid = item_container.find(grid_name, grid_class)
+            cell_list = grid.find_all(cell_tag_name, cell_class)
+        else:
+            cell_list = soup.find_all(cell_tag_name, cell_class)
+
         for item_cell in cell_list:
             pattern = target_mall["pattern"]
 
@@ -71,3 +75,5 @@ def parser_by_pattern(target, pattern):
         return target.text
     elif command == "find_all":
         return target.find_all(tag_name)
+    elif command == "find_all_class":
+        return target.find_all(tag_name, class_name)

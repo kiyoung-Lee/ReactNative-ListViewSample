@@ -2,7 +2,7 @@ import requests
 import json
 from bs4 import BeautifulSoup
 
-from main.parser import test_test
+from main.parser import parse
 
 
 def get_html(url):
@@ -16,7 +16,7 @@ def get_html(url):
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-target_name = "mocobling"
+target_name = "naning9"
 
 try:
     target_mall = config[target_name]
@@ -25,7 +25,7 @@ try:
     html = get_html(target_url)
     soup = BeautifulSoup(html, 'html.parser')
 
-    item_info_list = test_test(target_mall, soup)
+    item_info_list = parse(target_mall, soup)
 
 except KeyError:
     print("Invalid Shopping Mall")
