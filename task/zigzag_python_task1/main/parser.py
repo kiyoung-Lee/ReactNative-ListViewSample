@@ -11,7 +11,9 @@ def test_test(target_mall, soup):
         root_tag_class = root_tag["class"]
         item_container = soup.find(root_tag_name, root_tag_class)
 
-        grid_info = target_mall["grid_name"]
+        grid_name_key = root_tag["grid_name_key"]
+
+        grid_info = target_mall[grid_name_key]
         grid_name = grid_info["tag"]
         grid_class = grid_info["class"]
 
@@ -56,9 +58,13 @@ def get_item_by_pattern(item_cell, pattern_list):
 def parser_by_pattern(target, pattern):
     command = pattern["command"]
     tag_name = pattern["tag"]
+    if "class" in pattern:
+        class_name = pattern["class"]
 
     if command == "find":
         return target.find(tag_name)
+    elif command == "find_class":
+        return target.find(tag_name, class_name)
     elif command == "element":
         return target[tag_name]
     elif command == "text":

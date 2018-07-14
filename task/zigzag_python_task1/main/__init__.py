@@ -16,7 +16,7 @@ def get_html(url):
 with open('config.json', 'r') as f:
     config = json.load(f)
 
-target_name = "66girls"
+target_name = "mocobling"
 
 try:
     target_mall = config[target_name]
