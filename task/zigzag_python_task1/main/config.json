@@ -1,0 +1,384 @@
+{
+  "66girls": {
+    "url": "http://www.66girls.co.kr/",
+    "root_tag_list": [
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-1 xans-product-listmain xans-product-1"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-2 xans-product-listmain xans-product-2"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-6 xans-product-listmain xans-product-6"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-7 xans-product-listmain xans-product-7"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "codi_item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-8 xans-product-listmain xans-product-8"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "codi_item_price"
+      }
+    ],
+    "grid_name":{
+      "tag":"ul",
+       "class":{
+        "class": "prdList column4"
+      }
+    },
+    "cell_name":{
+      "tag":"div",
+      "class":{
+        "class": "box"
+      }
+    },
+    "pattern":{
+      "item_code":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"name"
+        }
+      ],
+      "item_detail_url":[
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "image_url":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"img"
+        },
+        {
+          "command":"element",
+          "tag":"src"
+        }
+      ],
+      "item_name":[
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"span"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "item_price":[
+        {
+          "command":"find",
+          "tag":"ul"
+        },
+        {
+          "command":"find",
+          "tag":"li"
+        },
+        {
+          "command":"find_all",
+          "tag":"span"
+        },
+        {
+          "command":"element",
+          "tag":1
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "codi_item_price":[
+        {
+          "command":"find",
+          "tag":"strong"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ]
+    }
+  },
+  "naning9": {
+    "url": "http://www.naning9.com/",
+    "root_tag_list": [
+      {
+        "tag":"div",
+        "class": {
+          "class" : "item_list cle"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "item_list list3322 cle"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "item_list cle"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      }
+    ]
+  },
+  "mocobling": {
+    "url": "http://www.mocobling.com/",
+    "root_tag_list": [
+      {
+        "tag":"div",
+        "class": {
+          "class" : "part2"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec5 aft"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec7 aft"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec8 aft"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec9 aft"
+        },
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      }
+    ],
+    "grid_name":{
+      "tag":"ul",
+       "class":{
+        "class": "prd_main col3"
+      }
+    },
+    "cell_name":{
+      "tag":"div",
+      "class":{
+        "class": "itembox"
+      }
+    },
+    "pattern":{
+      "item_code":[
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "item_detail_url":[
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "image_url":[
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"img"
+        },
+        {
+          "command":"element",
+          "tag":"src"
+        }
+      ],
+      "item_name":[
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"span"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "item_price":[
+        {
+          "command":"find",
+          "tag":"ul"
+        },
+        {
+          "command":"find",
+          "tag":"li"
+        },
+        {
+          "command":"find_all",
+          "tag":"span"
+        },
+        {
+          "command":"element",
+          "tag":1
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "codi_item_price":[
+        {
+          "command":"find",
+          "tag":"strong"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ]
+    }
+  }
+}
