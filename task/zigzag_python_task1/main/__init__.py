@@ -1,10 +1,6 @@
-#-*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 from main.loader import config_loader
 from main.parser import parser
-import sys
-reload(sys)
-sys.setdefaultencoding('utf-8')
 
 # target_name = "66girls"
 # target_name = "naning9"
@@ -52,7 +48,7 @@ def mocobling_parser(item_list):
         # item_name
         # 한글주석
         item_name = item.name
-        item.name = item_name.decode('euc-kr')
+        item.name = item_name.encode('utf-8').decode('utf-8')
         print("test")
 
 if config is not None:

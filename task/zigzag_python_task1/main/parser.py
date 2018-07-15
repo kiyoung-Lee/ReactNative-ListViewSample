@@ -64,7 +64,7 @@ class parser:
             item_result = self.parser_by_pattern(item_result, pattern_list[idx])
 
         if (idx + 1) == pattern_list_length:
-            return item_result.encode('utf-8')
+            return item_result
 
     def parser_by_pattern(self, target, pattern):
         command = pattern["command"]
