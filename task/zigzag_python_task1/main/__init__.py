@@ -1,10 +1,14 @@
+#-*- coding: utf-8 -*-
 from bs4 import BeautifulSoup
 from main.loader import config_loader
 from main.parser import parser
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 # target_name = "66girls"
-target_name = "naning9"
-# target_name = "mocobling"
+# target_name = "naning9"
+target_name = "mocobling"
 
 config = config_loader.load(target_name)
 
@@ -26,8 +30,30 @@ def naning_nine_parser(item_list):
     for item in item_list:
         # item_code
         item_code = item.code
-        result = item_code.rfind('index_no')
+        item_code_start_pos = item_code.find('index_no')
+        item_code_end_pos = item_code.find('&')
+
+        substring_start_idx = item_code_start_pos + 9
+        item.code = item_code[substring_start_idx:item_code_end_pos]
+
+        # detail_vice_url
+        detail_view_url = item.detail_view_url
+        item.detail_view_url = "http://www.naning9.com" + detail_view_url
         print("result")
+
+def mocobling_parser(item_list):
+    for item in item_list:
+        # item_code
+
+        # detail_view_url
+        detail_view_url = item.detail_view_url
+        item.detail_view_url = "http://www.mocobling.com" + detail_view_url
+
+        # item_name
+        # 한글주석
+        item_name = item.name
+        item.name = item_name.decode('euc-kr')
+        print("test")
 
 if config is not None:
     try:
@@ -40,7 +66,7 @@ if config is not None:
         soup = BeautifulSoup(html, 'html.parser')
 
         item_info_list = parser.parse(target_mall, soup)
-        naning_nine_parser(item_info_list)
+        mocobling_parser(item_info_list)
     except KeyError:
         print("Invalid Shopping Mall")
 
