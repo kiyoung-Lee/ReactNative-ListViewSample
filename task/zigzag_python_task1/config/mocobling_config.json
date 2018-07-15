@@ -1,0 +1,213 @@
+{
+   "mocobling": {
+    "url": "http://www.mocobling.com/",
+    "root_tag_list": [
+      {
+        "tag":"div",
+        "class": {
+          "class" : "part2"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name_new_item",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec5 aft"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name_moco_made",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec7 aft"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name_best_item",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec8 aft"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name_acc",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "section sec9 aft"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name_jewelry",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      }
+    ],
+    "grid_name_new_item":{
+      "tag":"ul",
+       "class":{
+        "class": "prd_main col3"
+      }
+    },
+    "grid_name_moco_made":{
+      "tag":"ul",
+       "class":{
+        "class": "prd_main col_3n2"
+      }
+    },
+    "grid_name_best_item":{
+      "tag":"ul",
+       "class":{
+        "class": "prd_main col5"
+      }
+    },
+    "grid_name_acc":{
+      "tag":"ul",
+       "class":{
+        "class": "prd_main col4"
+      }
+    },
+    "grid_name_jewelry":{
+      "tag":"ul",
+       "class":{
+        "class": "prd_main col5"
+      }
+    },
+    "cell_name":{
+      "tag":"div",
+      "class":{
+        "class": "itembox"
+      }
+    },
+    "pattern":{
+      "item_code":[
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "item_detail_url":[
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "image_url":[
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"div"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"img"
+        },
+        {
+          "command":"element",
+          "tag":"src"
+        }
+      ],
+      "item_name":[
+        {
+          "command":"find_class",
+          "tag":"div",
+          "class":{
+            "class" : "info"
+          }
+        },
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "item_price":[
+        {
+          "command":"find_class",
+          "tag":"div",
+          "class":{
+            "class" : "info"
+          }
+        },
+        {
+          "command":"find_class",
+          "tag":"p",
+          "class":{
+            "class" : "prc"
+          }
+        },
+        {
+          "command":"find",
+          "tag":"span"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ]
+    }
+  }
+}

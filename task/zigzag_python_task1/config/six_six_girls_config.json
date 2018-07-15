@@ -1,0 +1,174 @@
+{
+  "66girls": {
+    "url": "http://www.66girls.co.kr/",
+    "root_tag_list": [
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-1 xans-product-listmain xans-product-1"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-2 xans-product-listmain xans-product-2"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-6 xans-product-listmain xans-product-6"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-7 xans-product-listmain xans-product-7"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "codi_item_price"
+      },
+      {
+        "tag":"div",
+        "class": {
+          "class" : "xans-element- xans-product xans-product-listmain-8 xans-product-listmain xans-product-8"
+        },
+        "is_container" : true,
+        "grid_name_key" : "grid_name",
+        "item_code_pattern" : "item_code",
+        "item_detail_url_pattern" : "item_detail_url",
+        "image_url_pattern" :"image_url",
+        "item_name_pattern": "item_name",
+        "item_price_pattern": "codi_item_price"
+      }
+    ],
+    "grid_name":{
+      "tag":"ul",
+       "class":{
+        "class": "prdList column4"
+      }
+    },
+    "cell_name":{
+      "tag":"div",
+      "class":{
+        "class": "box"
+      }
+    },
+    "pattern":{
+      "item_code":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"name"
+        }
+      ],
+      "item_detail_url":[
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"element",
+          "tag":"href"
+        }
+      ],
+      "image_url":[
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"img"
+        },
+        {
+          "command":"element",
+          "tag":"src"
+        }
+      ],
+      "item_name":[
+        {
+          "command":"find",
+          "tag":"p"
+        },
+        {
+          "command":"find",
+          "tag":"a"
+        },
+        {
+          "command":"find",
+          "tag":"span"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "item_price":[
+        {
+          "command":"find",
+          "tag":"ul"
+        },
+        {
+          "command":"find",
+          "tag":"li"
+        },
+        {
+          "command":"find_all",
+          "tag":"span"
+        },
+        {
+          "command":"element",
+          "tag":1
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ],
+      "codi_item_price":[
+        {
+          "command":"find",
+          "tag":"strong"
+        },
+        {
+          "command":"text",
+          "tag":"text"
+        }
+      ]
+    }
+  }
+}
