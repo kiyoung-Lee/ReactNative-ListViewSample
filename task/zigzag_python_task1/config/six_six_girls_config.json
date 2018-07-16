@@ -169,6 +169,38 @@
           "tag":"text"
         }
       ]
+    },
+    "filter": {
+      "item_code": [
+        {
+          "command": "split",
+          "parameters": [
+            "_"
+          ]
+        },
+        {
+          "command": "element",
+          "parameters": [
+            0,1
+          ]
+        }
+      ],
+      "detail_view_url": [
+        {
+          "command": "plus_front",
+          "parameters": [
+            "www.66girls.co.kr/"
+          ]
+        }
+      ],
+      "item_image_url":[
+        {
+          "command": "strip",
+          "parameters": [
+            "//"
+          ]
+        }
+      ]
     }
   }
 }

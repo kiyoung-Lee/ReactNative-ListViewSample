@@ -99,6 +99,50 @@
           "tag":"text"
         }
       ]
+    },
+    "filter":{
+      "item_code":[
+        {
+          "command" : "find",
+          "parameters" :[
+            "index_no"
+          ]
+        },
+        {
+          "command" : "find",
+          "parameters" :[
+            "&"
+          ]
+        },
+        {
+          "command" : "plus_back_get_result",
+          "parameters" :[
+            0,9
+          ]
+        },
+        {
+          "command" : "substring_get_result",
+          "parameters" :[
+            2,1
+          ]
+        }
+      ],
+      "detail_view_url":[
+        {
+          "command":"plus_front",
+          "parameters" :[
+            "http://www.naning9.com"
+          ]
+        }
+      ],
+      "item_name":[
+        {
+          "command": "encode",
+          "parameters" :[
+            "utf-8"
+          ]
+        }
+      ]
     }
   }
 }
