@@ -248,7 +248,13 @@
          {
            "command": "encode",
            "parameters": [
-             "UTF-8"
+             "latin-1"
+           ]
+         },
+         {
+           "command": "decode_get_result",
+           "parameters": [
+             0,"cp949"
            ]
          }
        ]

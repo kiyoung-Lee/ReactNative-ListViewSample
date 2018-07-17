@@ -134,14 +134,6 @@
             "http://www.naning9.com"
           ]
         }
-      ],
-      "item_name":[
-        {
-          "command": "encode",
-          "parameters" :[
-            "utf-8"
-          ]
-        }
       ]
     }
   }
